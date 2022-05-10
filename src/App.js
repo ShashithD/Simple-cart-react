@@ -1,11 +1,11 @@
 import Navbar from './Navbar';
-//import Home from './Home';
+import Home from './Home';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-// import Create from './Create';
-// import Edit from './Edit';
-// import ProductDetails from './ProductDetails';
-// import NotFound from './NotFound';
-// import Cart from './cart/Cart';
+import Create from './Create';
+import Edit from './Edit';
+import ProductDetails from './ProductDetails';
+import NotFound from './NotFound';
+import Cart from './Cart';
 
 function App() {
     return (
@@ -14,10 +14,10 @@ function App() {
                 <Navbar/>
                 <div className="content">
                     <Switch>
-                        {/* <Route exact path="/">
+                        <Route exact path="/">
                             <Home/>
-                        </Route> */}
-                        {/* <Route exact path="/create">
+                        </Route>
+                        <Route exact path="/create">
                             <Create/>
                         </Route>
                         <Route exact path="/edit/:id">
@@ -31,7 +31,7 @@ function App() {
                         </Route>
                         <Route path="*">
                             <NotFound/>
-                        </Route> */}
+                        </Route>
                     </Switch>
                 </div>
             </div>
