@@ -16,7 +16,7 @@ const ProductDetails = () => {
         fetch('https://127.0.0.1:8000/product/delete/' + product.id, {
             method: 'DELETE'
         }).then(() => {
-            history.push('/');
+            history.push('/products');
         })
     }
     return ( 

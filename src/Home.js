@@ -9,8 +9,6 @@ const Home = () => {
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
             {products && <ProductList products={products} title="All products!"/>}
-            
-
         </div>
      );
 }

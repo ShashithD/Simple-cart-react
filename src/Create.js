@@ -15,8 +15,7 @@ const Create = () => {
 
         const product = {name, description, price , qty, image};
 
-        alert(JSON.stringify(product));
-       setIsPending(true);
+        setIsPending(true);
 
         fetch('https://127.0.0.1:8000/product/create', {
             method: 'POST',
@@ -28,31 +27,32 @@ const Create = () => {
             history.push('/');
         })
     }
+
     return ( 
         <div className="create">
             <h2>Add New Product</h2>
             <form onSubmit={handleSubmit}>
-                <label >product name</label>
+                <label >product name*</label>
                 <input 
                     type="text" 
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
-                <label >product description</label>
+                <label >product description*</label>
                 <textarea 
                     required
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                ></textarea>
-                <label >product price</label>
+                />
+                <label >product price*</label>
                 <input 
                     type="number" 
                     required
                     value={price}
                     onChange={(e) => setPrice(parseInt(e.target.value))}
                 />
-                <label >product quantity</label>
+                <label >product quantity*</label>
                 <input 
                     type="number" 
                     required

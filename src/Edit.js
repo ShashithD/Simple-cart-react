@@ -14,8 +14,8 @@ const Edit = () => {
 
     useEffect(() => {
         fetch('https://127.0.0.1:8000/product/fetch-one/' + id)
-            .then(res => {
-                return res.json();
+            .then(response => {
+                return response.json();
             })
             .then(data => {
                 if (isPendingProduct) {
@@ -43,7 +43,7 @@ const Edit = () => {
         }).then(() => {
             setIsPending(false);
 
-            history.push('/');
+            history.push('/products');
         })
     }
 

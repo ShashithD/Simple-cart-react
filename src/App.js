@@ -6,6 +6,7 @@ import Edit from './Edit';
 import ProductDetails from './ProductDetails';
 import NotFound from './NotFound';
 import Cart from './Cart';
+import Products from './Products';
 
 function App() {
     return (
@@ -16,6 +17,9 @@ function App() {
                     <Switch>
                         <Route exact path="/">
                             <Home/>
+                        </Route>
+                        <Route exact path="/products">
+                            <Products/>
                         </Route>
                         <Route exact path="/create">
                             <Create/>
